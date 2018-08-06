@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selector</title>
+    <style>
+        div{
+            background-color: red;
+        }
+        .selector-class{
+            background-color: yellow;
+        }
+        .another-class{
+            color: red;
+        }
+        #selector-id{
+            background-color: blue;
+        }
+        * {
+            margin: 0;                    /* 定义外边距*/
+            padding: 0;                   /* 定义内边距*/
+            /* 通配符选择器 */
+        }
+        div.one{
+            background-color: green;
+        }
+        .c1, 
+        .c2{
+            color: white;
+            background-color: #000000;
+        }
+        .father p{
+            font-size: 30px;
+        }
+        .a-class:hover{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>selector</div><!-- 标签选择器 -->
+    <div class="selector-class">selector</div><!-- 类选择器 -->
+    <div class="selector-class another-class">selector</div><!-- 多类名选择器 -->
+    <div id="selector-id">selector</div><!-- id选择器 -->
+    <div class="one">selector</div><!-- 交集选择器由两个选择器构成，其中第一个为标签选择器，第二个为class选择器，两个选择器之间不能有空格，如h3.special -->
+    <div class="c1">并集选择器</div>
+    <div class="c2">并集选择器</div><!-- 并集选择器  和 的意思，  就是说，只要逗号隔开的，所有选择器都会执行后面样式 -->
+    <div class="father">
+        <p>段落1</p>
+        <p>段落2</p>
+        <!-- 后代选择器又称为包含选择器，用来选择元素或元素组的后代，
+             其写法就是把外层标签写在前面，内层标签写在后面，中间用空格分隔。
+             当标签发生嵌套时，内层标签就成为外层标签的后代。 
+            
+            子元素选择器只能选择作为某元素子元素的元素。
+            其写法就是把父级标签写在前面，子级标签写在后面，中间跟一个 > 进行连接，注意，符号左右两侧各保留一个空格。
+
+            -->
+    </div>
+    <div>
+        <a href="url" class="a-class">链接</a>
+        <!--  链接伪类选择器
+
+            - :link      未访问的链接
+            - :visited   已访问的链接
+            - :hover     鼠标移动到链接上
+            - :active    选定的链接 
+         -->
+    </div>
+</body>
+</html>
