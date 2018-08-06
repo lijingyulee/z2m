@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn</title>
+</head>
+<body>
+    标题：
+    <h1>标题</h1>
+    <h2>标题</h2>
+    <h3>标题</h3>
+    <h4>标题</h4>
+    <h5>标题</h5>
+    <h6>标题</h6>
+    <!-- 注意：  h1 标签因为重要，尽量少用，不要动不动就向你扔了一个h1。 一般h1 都是给logo使用，或者页面中最重要标题信息。 -->
+
+    段落：
+    <p>这是一个段落</p>
+    <!-- p是HTML文档中最常见的标签，默认情况下，文本在一个段落中会根据浏览器窗口的大小自动换行。 -->
+
+    水平线：
+    <hr />
+
+    换行：<br />
+    我要换行<br />了
+
+    <div>我是一个div</div>
+    <div>我是一个div</div>
+    <span>我是一个span</span>
+    <span>我是一个span</span>
+    <!-- 一般布局都是css+div -->
+
+    <br />
+    文本格式化标签：
+    <br />
+    <img src="./img/text.png" alt="">
+    <!-- b  i  s  u   只有使用 没有 强调的意思       strong   em  del   ins  语义更强烈 -->
+    <!-- 实际开发中，很多情况下用作钩子，反而将倾斜的元素变正 -->
+
+    img标签：
+    <img src="./img/img.png" alt=""><br />
+
+    链接的 HTML 代码很简单。它类似这样：
+    <a href="url">链接文本</a><br />
+    使用 target 属性，你可以定义被链接的文档在何处显示。
+    <a href="url" target="_blank">打开新的标签页</a><br />
+    id 属性：id属性可用于创建在一个HTML文档书签标记。（锚点定位）<br />
+    在HTML文档中插入ID:
+    <a id="tips">有用的提示部分</a><br />
+    在HTML文档中创建一个链接到"有用的提示部分(id="tips"）"：
+    <a href="#tips">访问有用的提示部分</a><br />
+    或者，从另一个页面创建一个链接到"有用的提示部分(id="tips"）"：
+    <a href="url#tips">访问有用的提示部分</a><br />
+    base 可以设置整体链接的打开状态   base 写到  <head>  </head>  之间 把所有的连接 都默认添加 target="_blank"<br />
+    <!-- <base target="_blank"> -->
+    <br />
+    无序列表 ul
+    <ul>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ul>
+    <!-- <ul></ul>中只能嵌套<li></li>，不能输入其他标签或文字。<li>相当于一个容器，可以容纳所有元素。 -->
+    有序列表：
+    <ol>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ol>
+    自定义列表：
+    <dl>
+        <dt>名词1</dt>
+        <dd>名词1解释1</dd>
+        <dd>名词1解释2</dd>
+        <dt>名词2</dt>
+        <dd>名词2解释1</dd>
+        <dd>名词2解释2</dd>
+    </dl>
+    <!-- 常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号 -->
+
+    <table>
+        <tr>
+            <td>单元格内的文字</td>
+        </tr>
+    </table>
+    <!-- <tr></tr>中只能嵌套<td></td> <td></td>标签，他就像一个容器，可以容纳所有的元素 -->
+    表格属性：<br />
+    <img src="./img/table.png" alt=""><br />
+    <!-- 表格一般三参为0    border  cellpadding  cellspacing  为  0 -->
+    <!-- 表头单元格一般位于表格的第一行或第一列，其文本加粗居中，设置表头非常简单，只需用表头标签th</th替代相应的单元格标签td</td即可。 -->
+    imput:<br />
+    <img src="./img/input.png" alt=""><br />
+    label:<br />
+    <label for="male">Male</label>
+    <input type="radio" name="sex" id="male" value="male"><br />
+    <!-- for 属性规定 label 与哪个表单元素绑定。 -->
+    textarea:
+    <textarea name="" id="" cols="30" rows="10"></textarea><br/>
+    select:
+    <select>
+        <option>选项1</option>
+        <option>选项2</option>
+        <option>选项3</option>
+    </select>
+    <!-- select</select中至少应包含一对option></option。在option 中定义selected =" selected "时，当前项即为默认选中项。-->
+
+    表单域：
+    <form action="url地址" method="提交方式" name="表单名称">
+        各种表单控件
+    </form>
+</body>
+</html>
