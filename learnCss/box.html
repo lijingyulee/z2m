@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        /* text-align: center;
+        line-height: 100px;
+        border-collapse:collapse; */
+        margin: 10px;
+    }
+    .div1{
+        background-color: red;
+    }
+    .div2{
+        background-color: rgb(255, 145, 0);
+        border: 10px solid purple;
+        padding: 10px;
+    }
+    .div3{
+        background-color: rgb(255, 238, 0);
+        border: 10px dashed pink;
+        border-radius: 50%; 
+    }
+    .div4{
+        background-color: green;
+        border: 10px dotted purple;
+        box-shadow: 0 15px 50px  rgba(0, 0, 0, .4);
+    }
+    .div5{
+        background-color: rgb(0, 162, 255);
+        border: 10px double black;
+    }
+</style>
+<body>
+    <!-- 
+        盒子边框：border : border-width || border-style || border-color 
+        none：没有边框即忽略所有边框的宽度（默认值）
+        solid：边框为单实线(最为常用的)
+        dashed：边框为虚线  
+        dotted：边框为点线
+        double：边框为双实线
+
+        border-top border-bottom border-left border-right
+        border-collapse:collapse; 表示相邻边框合并在一起。
+     -->
+
+     <!-- 
+        padding属性用于设置内边距。  是指 边框与内容之间的距离。
+        padding-top:上内边距
+        padding-right:右内边距
+        padding-bottom:下内边距
+        padding-left:左内边距
+
+        padding: 3px; 上下左右都是3px
+        padding: 3px 5px 上下3px，左右5px
+        padding：3px 5px 10px 上3px 左右5px 下10px
+        padding: 3px 5px 10px 15px; 上3px 右是5px 下 10px 左15px 顺时针 
+
+        盒子宽： border-left+ padding-left + width + padding-right + border-right
+        w 100  padding 10  border 5  ? 实际大小 ？   130 
+        盒子高：border-top + padding-top +height + padding-bottom + border-bottom
+      -->
+
+      <!-- 
+        margin属性用于设置外边距。  设置外边距会在元素之间创建“空白”， 这段空白通常不能放置其他内容。
+        margin-top:上外边距
+        margin-right:右外边距
+        margin-bottom:下外边距
+        margin-left:上外边距
+        margin:上外边距 右外边距  下外边距  左外边
+        取值顺序跟内边距相同。
+        外边距实现盒子居中条件：
+        1. 必须是块级元素。     
+        2. 盒子必须指定了宽度（width）
+        .class{ width:100px; margin:0 auto;}
+        text-align: center; /*  文字居中水平 */
+        当上下相邻的两个块元素相遇时，如果上面的元素有下外边距margin-bottom，下面的元素有上外边距margin-top，则他们之间的垂直间距不是margin-bottom与margin-top之和，而是两者中的较大者。这种现象被称为相邻块元素垂直外边距的合并（也称外边距塌陷）
+        对于两个嵌套关系的块元素，如果父元素没有上内边距及边框，则父元素的上外边距会与子元素的上外边距发生合并，合并后的外边距为两者中的较大者，即使父元素的上外边距为0，也会发生合并。
+        解决方案：
+            1. 可以为父元素定义1像素的上边框或上内边距。
+            2. 可以为父元素添加overflow:hidden。
+        使用顺序：
+        width >  padding  >   margin（宽度剩余法）
+
+       -->
+       <!-- 
+           圆角边框(CSS3) border-radius: 50%; 
+           盒子阴影(CSS3) box-shadow:水平阴影 垂直阴影 模糊距离（虚实）  阴影尺寸（影子大小）  阴影颜色  内/外阴影；
+           前两个属性是必须写的。其余的可以省略。外阴影 (outset)默认 内阴影  inset
+
+       -->
+     <div class="div1">div1</div>
+     <div class="div2">div2</div>
+     <div class="div3">div3</div>
+     <div class="div4">div4</div>
+     <div class="div5">div5</div>
+</body>
+</html>
