@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father{
+            padding: 20px;
+            background-color: black;
+            height: 100px;
+        }
+        .fl{
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .div1{
+            background-color: red;
+        }
+        .div2{
+            background-color: orange;
+        }
+        .div3{
+            background-color: yellow
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        元素的浮动是指设置了浮动属性的元素会脱离标准标准流的控制，移动到其父元素中指定位置的过程
+        left元素向左浮动 right元素向右浮动 none元素不浮动（默认值）
+        浮动的元素总是找理它最近的父级元素对齐。但是不会超出内边距的范围
+        浮动可以使元素显示模式体现为行内块特性
+
+        清除浮动主要为了解决父级元素因为子级浮动引起内部高度为0 的问题。
+        清除浮动的方法：
+        1、选择器{clear:属性值;}  left、right、both
+        2、在浮动元素末尾添加一个空的标签例如 <div style=”clear:both”></div>
+        3、父级添加overflow属性方法 overflow为 hidden|auto|scroll  都可以实现。
+        4、使用after伪元素清除浮动
+            .clearfix:after {  content: ""; display: block; height: 0; clear: both; visibility: hidden;  }   
+            .clearfix {*zoom: 1;}   /* IE6、7 专有 */
+        5、使用before和after双伪元素清除浮动
+            .clearfix:before,.clearfix:after { 
+                content:"";
+                display:table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
+            }
+            .clearfix:after {
+                clear:both;
+            }
+            .clearfix {
+                *zoom:1;
+            }
+     -->
+     <div class="father">
+         <div class="fl div1">浮动</div>
+         <div class="fl div2">浮动</div>
+         <div class="fl div3">浮动</div>
+
+     </div>
+</body>
+</html>
