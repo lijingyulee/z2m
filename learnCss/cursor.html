@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cursor</title>
+</head>
+<body>
+    <ul>
+        <li style="cursor:default">我是小白</li>
+        <li style="cursor:pointer">我是小手</li>
+        <li style="cursor:move">我是移动</li>
+        <li style="cursor:text">我是文本</li>
+    </ul>
+    <input type="text" style="outline: 0;"/>
+    <!-- 去掉轮廓线：outline: 0;   或者  outline: none; -->
+    <br><br>
+    <textarea  style="resize: none;"></textarea>
+    <!-- 防止拖拽文本 -->
+
+    <!-- vertical-align 不影响块级元素中的内容对齐，它只针对于 行内元素或者行内块元素，特别是行内块元素， 通常用来控制图片/表单与文字的对齐。 -->
+    <!-- 默认的图片会和文字基线对齐。图片或者表单等行内块元素，他的底线会和父级盒子的基线对齐。这样会造成一个问题，就是图片底侧会有一个空白缝隙。 -->
+    <!-- 
+        解决办法：
+        1.给img vertical-align:middle | top等等。  让图片不要和基线对齐。
+        img{vertical-align:top;border:0}
+        2.给img 添加 display：block; 转换为块级元素
+        img{border:0;display:block}
+     -->
+</body>
+</html>
