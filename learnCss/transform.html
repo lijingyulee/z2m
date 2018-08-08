@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform</title>
+</head>
+<style>
+    div{
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        top: 50px;
+        left: 50px;
+        position: absolute;
+        /* transform: translate(50%,50%) */
+        /* transform: scale(.5, .2) */
+        transform: rotate(45deg)
+    }
+</style>
+<body>
+    <!-- 
+        translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）
+        translateX(x)仅水平方向移动（X轴移动）
+        translateY(Y)仅垂直方向移动（Y轴移动）
+     -->
+     <!-- 
+        scale(X,Y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）
+        scaleX(x)元素仅水平方向缩放（X轴缩放）
+        scaleY(y)元素仅垂直方向缩放（Y轴缩放）
+      -->
+
+      <!-- 
+          transform:rotate(45deg); 旋转
+          transform-origin可以调整元素转换变形的原点
+          div{transform-origin: left top;transform: rotate(45deg); }  /* 改变元素原点到左上角，然后进行顺时旋转45度 */ 
+          div{transform-origin: 10px 10px;transform: rotate(45deg); }  /* 改变元素原点到x 为10  y 为10，然后进行顺时旋转45度 */ 
+       -->
+
+       <!-- 
+        倾斜 skew(deg, deg)
+          该实例通过skew方法把元素水平方向上倾斜30度，处置方向保持不变。
+          可以使元素按一定的角度进行倾斜，可为负值，第二个参数不写默认为0
+        -->
+     <div></div>
+</body>
+</html>
