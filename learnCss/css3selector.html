@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3selector</title>
+</head>
+<body>
+    <!-- 
+        - :first-child :选取属于其父元素的首个子元素的指定选择器
+        - :last-child :选取属于其父元素的最后一个子元素的指定选择器
+        - :nth-child(n) ： 匹配属于其父元素的第 N 个子元素，不论元素的类型
+        - :nth-last-child(n) ：选择器匹配属于其元素的第 N 个子元素的每个元素，不论元素的类型，从最后一个子元素开始计数。
+        n 可以是数字、关键词或公式
+
+        /* 获取到 拥有 该属性的元素 */
+        div[class^=font] { /*  class^=font 表示 font 开始位置就行了 */
+                    color: pink;
+                }
+        div[class$=footer] { /*  class$=footer 表示 footer 结束位置就行了 */
+                    color: skyblue;
+                }
+        div[class*=tao] { /* class*=tao  *=  表示tao 在任意位置都可以 */
+                    color: green;
+                }
+        
+        伪元素选择器
+        1. E::first-letter文本的第一个单词或字（如中文、日文、韩文等）
+        2. E::first-line 文本第一行；
+        3. E::selection 可改变选中文本的样式；
+
+        E::before和E::after
+        ":" 与 "::" 区别在于区分伪类和伪元素
+         之所以被称为伪元素，是因为他们不是真正的页面元素，html没有对应的元素，但是其所有用法和表现行为与真正的页面元素一样，可以对其使用诸如页面元素一样的css样式，表面上看上去貌似是页面的某些元素来展现，实际上是css样式展现的行为，因此被称为伪元素。是伪元素在html代码机构中的展现，可以看出无法伪元素的结构无法审查
+
+     -->
+</body>
+</html>
