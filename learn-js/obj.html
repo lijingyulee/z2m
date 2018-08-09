@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-obj</title>
+</head>
+<body>
+    <div>js-obj</div>
+    <script>
+        //对象创建方式
+        //1
+        var p = {
+            name: 'jack',
+            age: 18,
+            getName: function (){
+                return this.name;
+            }
+        }
+
+        //2
+        var p2 = new Object();
+        p2.name = 'rose';
+        p2.age = 16;
+        p2.getHi = function (){
+            return this.name;
+        }
+        
+        //3 工厂函数创建对象
+        function createPerson(name, age, job) {
+            var person = new Object();
+            person.name = name;
+            person.age = age;
+            person.job = job;
+            person.sayHi = function(){
+                console.log('Hello,everyBody');
+            }
+            return person;
+        }
+        var p1 = createPerson('张三', 22, 'actor');
+        //4 自定义构造函数
+        function Person(name,age,job){
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayHi = function(){
+                console.log('Hello,everyBody');
+            }
+        }
+        var p1 = new Person('张三', 22, 'actor');
+
+        //遍历对象
+        var obj = {};
+        for (var i = 0; i < 10; i++) {
+            obj[i] = i * 2;
+        }
+        for(var key in obj) {
+            console.log(key + "==" + obj[key]);
+        }
+
+        //删除对象的属性
+        function fun() { 
+            this.name = 'mm';
+        }
+        var obj = new fun(); 
+        console.log(obj.name); // mm 
+        delete obj.name;
+        console.log(obj.name); // undefined
+    </script>
+</body>
+</html>
