@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch</title>
+</head>
+<body>
+    <div>js-switch</div>
+    <script>
+        /* 
+            switch (expression) {
+                case 常量1:
+                    语句;
+                    break;
+                case 常量2:
+                    语句;
+                    break;
+                default:
+                    语句;
+                    break;
+                }
+                break可以省略，如果省略，代码会继续执行下一个case
+                switch 语句在比较值时使用的是全等操作符, 因此不会发生类型转换（例如，字符串'10' 不等于数值 10）
+        */
+       var type = typeof 'abc';
+       switch (type) {
+           case 'string':
+               console.log('string')
+               break;
+           case 'number':
+               console.log('number');
+               break;
+       
+           default:
+               console.log('其他类型');
+               break;
+       }
+    </script>
+</body>
+</html>

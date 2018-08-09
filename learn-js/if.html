@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if</title>
+</head>
+<body>
+    <div>js-if</div>
+    <script>
+        var flag = true;
+        if (flag) {
+            console.log('flag-true');
+        } else {
+            console.log('flag-false');
+        }
+        //可以换成三元运算符
+        flag ? console.log('flag-true') : console.log('flag-false');
+
+        var score = 0;
+        if (score >= 60 && score < 70){
+            console.log('及格');
+        } else if (score >= 70 && score < 80){
+            console.log('中');
+        } else if (score >= 80 && score < 90){
+            console.log('良');
+        } else if (score >= 90 && score < 100){
+            console.log('优');
+        } else {
+            console.log('不及格');
+        }
+
+
+    </script>
+</body>
+</html>

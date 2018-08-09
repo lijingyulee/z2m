@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>type</title>
+</head>
+<body>
+    <div>js-type</div>
+    <script>
+        //浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数
+        var result = 0.1 + 0.2;    // 结果不是 0.3，而是：0.30000000000000004
+        //不要判断两个浮点数是否相等
+        //isNaN: is not a number 如果参数是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果参数是其他值,则返回 false
+        console.log(isNaN(10));//false
+        console.log(isNaN('10'));//false
+        console.log(isNaN('abc'));//true
+
+        //获取变量的类型 typeof
+        console.log(typeof 10);//number
+        console.log(typeof 'abc');//string
+
+        //转化成字符串类型
+        //toString()
+        //String() String()函数存在的意义：有些值没有toString()，这个时候可以使用String()。比如：undefined和null
+        //拼接字符串方式
+
+        /* 
+            转化成数值类型
+            1.Number() 可以把任意值转换成数值，如果要转换的字符串中有一个不是数值的字符，返回NaN
+            2.parseInt()
+              parseInt("12.3abc");  // 返回12，如果第一个字符是数字会解析直到遇到非数字结束
+              parseInt("abc123");   // 返回NaN，如果第一个字符不是数字或者符号就返回NaN
+            3.parseFloat()
+              parseFloat()把字符串转换成浮点数
+              parseFloat()和parseInt()非常相似，不同之处在于parseFloat会解析第一个. 遇到第二个.或者非数字结束,如果解析的内容里只有整数，解析成整数、
+            4.+，-0等运算
+              var str = '500';
+              console.log(+str);		// 取正
+              console.log(-str);		// 取负
+              console.log(str - 0);
+        */
+       /* 
+        转换成布尔类型 Boolean() js中0、""、null、false、undefined、NaN都会判为false
+       */
+    </script>
+</body>
+</html>

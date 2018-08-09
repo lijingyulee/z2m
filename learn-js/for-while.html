@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for-while</title>
+</head>
+<body>
+    <div>js-for-while</div>
+    <script>
+        // 当循环条件为true时，执行循环体，
+        // 当循环条件为false时，结束循环。
+        var i = 0;
+        while (i < 10) {
+            console.log('while');
+            i++;
+        }
+
+        var j = 0;
+
+        do {
+            console.log('do-while');
+            j++;
+        } while (j < 10);
+
+        for (var m=0; m < 10; m++){
+            console.log('for');
+        }
+
+        /* 
+            break:立即跳出整个循环，即循环结束，开始执行循环后面的内容（直接跳到大括号）
+            continue:立即跳出当前循环，继续下一次循环（跳到i++的地方）
+        */
+
+    </script>
+</body>
+</html>
