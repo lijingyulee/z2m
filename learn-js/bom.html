@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bom</title>
+</head>
+<body>
+    <div>js-bom</div>
+    <script>
+        /* 
+        BOM(Browser Object Model) 是指浏览器对象模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。
+        我们在浏览器中的一些操作都可以使用BOM的方式进行编程处理，
+        比如：刷新浏览器、后退、前进、在浏览器中输入URL等
+        对话框：alert(),prompt(),confirm()
+        页面加载事件：window.onload = function (){
+            当页面加载完成执行
+            当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行
+        }
+        window.onunload = function () {
+            当用户退出页面时执行
+        }
+
+        setTimeout() 在指定的时间后执行，只执行一次
+        */
+       var timeoutId = setTimeout(function (){
+           alert('1s');
+       }, 1000);
+       // 取消定时器的执行
+        clearTimeout(timeoutId);
+        //setInterval()按照给定的时间周期执行函数
+        // 创建一个定时器，每隔1秒调用一次
+        var timerId = setInterval(function () {
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+
+        // 取消定时器的执行
+        //clearInterval(timerId);
+    </script>
+</body>
+</html>

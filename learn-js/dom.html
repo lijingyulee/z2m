@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom</title>
+    <style>
+        #divId,
+        #mouse{
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="divId">js-dom</div>
+    <div id="box">box</div>
+    <div id="mouse">mouse</div>
+    <script>
+        window.onload = function (){
+            var div = document.getElementById('divId');
+            console.log(div);
+            div.onclick = function (){
+                alert('click');
+            }
+            /* 
+                document.getElementsByTagName()
+                document.getElementsByName()
+                document.getElementsByClassName()
+                document.querySelector('#query');
+            */
+           /* 
+                非表单元素的属性:href、title、id、src、className 直接selector.属性
+           */
+            // var box = document.getElementById('box');
+            // box.innerHTML = '我是文本<p>我会生成为标签</p>';
+            // console.log(box.innerHTML);
+            //box.innerText = '我是文本<p>我不会生成为标签</p>';
+            //console.log(box.innerText);
+
+            /* 
+                表单元素属性:
+                - value 用于大部分表单元素的内容获取(option除外)
+                - type 可以获取input标签的类型(输入框或复选框等)
+                - disabled 禁用属性
+                - checked 复选框选中属性
+                - selected 下拉菜单选中属性
+            */
+
+           /* 
+                自定义属性操作
+                - getAttribute() 获取标签行内属性
+                - setAttribute() 设置标签行内属性
+                - removeAttribute() 移除标签行内属性
+                - 与element.属性的区别: 上述三个方法用于获取任意的行内属性。
+           */
+
+          //document.createElement()
+           var body = document.body;
+           var div = document.createElement('div');
+           body.appendChild(div);
+
+           //- event.preventDefault() 取消默认行为
+
+            var mouse = document.getElementById('mouse');
+            window.onmousemove = function (e){
+               //console.log(e.clientX,e.clientY);
+               mouse.style.left = e.clientX + 'px';
+               mouse.style.top = e.clientY + 'px'; 
+               //console.log(mouse.offsetTop);
+           }
+
+        }
+       
+    </script>   
+</body>
+</html>
