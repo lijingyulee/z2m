@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prototype</title>
+</head>
+<body>
+    <div>prototype</div>
+    <script>
+        function Person(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype = {
+            constructor: Person, // => 手动将 constructor 指向正确的构造函数
+            type: 'person',
+            say: function (){
+                console.log('你好，我是' + this.name);
+            }
+        }
+        /* 
+            - 私有成员（一般就是非函数成员）放到构造函数中
+            - 共享成员（一般就是函数）放到原型对象中
+            - 如果重置了 prototype 记得修正 constructor 的指向
+        */
+    </script>
+</body>
+</html>
